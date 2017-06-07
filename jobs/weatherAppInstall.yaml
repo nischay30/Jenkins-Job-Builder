@@ -1,0 +1,13 @@
+- job:
+    name: weatherAppInstallDependencies
+    project-type: freestyle
+    description: 'Install npm dependencies through yaml'
+    scm:
+      - workspace:
+          parent-job: weatherAppClone
+          criteria: Any
+    wrappers:
+      - nodejs-installator:
+          name: "latest node"      
+    builder:
+      shell: 'npm install'
