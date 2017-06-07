@@ -12,3 +12,7 @@
        - github
      builders:
        - shell: 'ls $WORKSPACE'
+     publishers:
+       - clone-workspace:
+           criteria: "successful"
+           archive-method: "zip" 
