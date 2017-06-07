@@ -15,4 +15,7 @@
      publishers:
        - clone-workspace:
            criteria: "successful"
-           archive-method: "zip" 
+           archive-method: "zip"
+       - trigger:
+           project: weatherAppInstallDependencies
+           threshold: SUCCESS 
