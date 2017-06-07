@@ -10,4 +10,11 @@
       - nodejs-installator:
           name: "latest node"
     builders:
-      shell: 'npm install'
+      - shell: "npm install"
+    publishers:
+      - clone-workspace:
+          criteria: "successful"
+          archive-method: "zip"
+      - trigger:
+          project: weatherAppBuild
+          threshold: SUCCESS
