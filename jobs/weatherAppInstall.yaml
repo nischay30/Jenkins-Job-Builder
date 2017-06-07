@@ -5,7 +5,7 @@
     scm:
       - workspace:
           parent-job: weatherAppClone
-          criteria: "successful"
+          criteria: "any"
     wrappers:
       - nodejs-installator:
           name: "latest node"

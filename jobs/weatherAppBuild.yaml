@@ -5,7 +5,7 @@
     scm:
       - workspace:
           parent-job: weatherAppInstallDependencies
-          criteria: "successful"
+          criteria: "any"
     wrappers:
       - nodejs-installator:
           name: "latest node"
@@ -15,3 +15,6 @@
       - clone-workspace:
           criteria: "successful"
           method: "zip"
+      - trigger:
+          project: weatherAppTest
+          threshold: SUCCESS 

@@ -1,0 +1,17 @@
+- job:
+    name: weatherAppTest
+    project-type: freestyle
+    description: 'Test using yaml'
+    scm:
+      - workspace:
+          parent-job: weatherAppBuild
+          criteria: "any"
+    wrappers:
+      - nodejs-installator:
+          name: "latest node"
+    builders:
+      - shell: "npm run test"
+    publishers:
+      - clone-workspace:
+          criteria: "successful"
+          method: "zip"
