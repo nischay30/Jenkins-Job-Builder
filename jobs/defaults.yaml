@@ -2,5 +2,5 @@
     name: global
     logrotate:
       daysToKeep: 1
-      numToKeep: 1
+      numToKeep: 4 
     

@@ -6,9 +6,9 @@
       - workspace:
           parent-job: weatherAppClone
           criteria: "any"
-    wrappers:
-      - nodejs-installator:
-          name: "latest node"
+#    wrappers:
+#      - nodejs-installator:
+#          name: "latest node"
     builders:
       - shell: "npm install"
     publishers:
