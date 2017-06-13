@@ -17,5 +17,5 @@
            criteria: "successful"
            archive-method: "zip"
        - trigger:
-           project: weatherAppInstallDependencies
+           project: weatherAppInstallDepenAndBuild
            threshold: SUCCESS 
