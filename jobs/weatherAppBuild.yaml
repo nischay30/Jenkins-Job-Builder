@@ -6,7 +6,7 @@
       - workspace:
           parent-job: weatherAppInstallDependencies
           criteria: "any"
-   wrappers:
+    wrappers:
      - nodejs-installator:
          name: "node"
     builders:

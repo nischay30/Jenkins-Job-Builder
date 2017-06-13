@@ -4,9 +4,9 @@
     description: 'Test using yaml'
     scm:
       - workspace:
-          parent-job: weatherAppBuild
+          parent-job: weatherAppInstallDepenAndBuild
           criteria: "any"
-   wrappers:
+    wrappers:
      - nodejs-installator:
          name: "node"
     builders:

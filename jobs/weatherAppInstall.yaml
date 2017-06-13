@@ -1,20 +1,20 @@
 - job:
-    name: weatherAppInstallDependencies
+    name: weatherAppInstallDepenAndBuild
     project-type: freestyle
-    description: 'Install npm dependencies through yaml'
+    description: 'Install npm dependencies through yaml and build'
     scm:
       - workspace:
           parent-job: weatherAppClone
           criteria: "any"
-   wrappers:
+    wrappers:
      - nodejs-installator:
          name: "node"
     builders:
-      - shell: "npm install"
+      - shell: "npm install && npm run build"
     publishers:
       - clone-workspace:
           criteria: "successful"
           archive-method: "zip"
       - trigger:
-          project: weatherAppBuild
+          project: weatherAppTest
           threshold: SUCCESS
