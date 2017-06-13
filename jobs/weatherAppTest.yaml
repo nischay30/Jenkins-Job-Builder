@@ -6,9 +6,9 @@
       - workspace:
           parent-job: weatherAppBuild
           criteria: "any"
-#    wrappers:
-#      - nodejs-installator:
-#          name: "latest node"
+   wrappers:
+     - nodejs-installator:
+         name: "node"
     builders:
       - shell: "npm run test"
     publishers:
